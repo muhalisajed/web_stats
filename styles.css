@@ -30,13 +30,13 @@ body {
 
 .box1 h1 {
         margin: 0;
-        font-size: 5.5em;
+        font-size: 5.5rem;
         font-weight: bold;
 }
 
 .box1 p {
         margin: 0;
-        font-size: 1.8em;
+        font-size: 1.8rem;
         font-weight: bold;
         text-transform: uppercase;
 }
@@ -55,12 +55,12 @@ body {
 }
 
 .box2 p {
-        font-size: 1.8em;
+        font-size: 1.8rem;
         margin: 0;
 }
 
 h3 {
-        font-size: 3.2em;
+        font-size: 3.2rem;
         margin: 0;
 }
 
@@ -83,7 +83,7 @@ h3 {
 .box3 a{
         background-color: #7000FF;
         color: #FFF;
-        border-radius: 1em;
+        border-radius: .5em;
         text-decoration: none;
         font-size: 2rem;
         font-weight: bold;
@@ -105,17 +105,16 @@ retrieved from: https://www.emailonacid.com/blog/article/email-development/email
         .wrapper {
                 flex-direction: row;
                 flex-wrap: wrap; 
-                padding: 2em;
+                padding: 1em;
                 gap: 2em;
         }
 
-        .box1, .box2 {
+        .box1, .box2, .box3 {
                 align-self: center;
         }
 
         .box1 {
                 padding: 4em 4em;
-                align-content: center;
                 flex: 2;
         }
 
@@ -126,7 +125,6 @@ retrieved from: https://www.emailonacid.com/blog/article/email-development/email
         }
         
         .box3 {
-               flex-direction: column;
                 flex: 1;
         }
 }
@@ -134,10 +132,31 @@ retrieved from: https://www.emailonacid.com/blog/article/email-development/email
 @media only screen and (min-width: 900px) {
         .wrapper {
                 flex-wrap: nowrap;
-                flex: 0;
+                max-width: 1200px;
+                gap: 2em;
+                justify-content: center;
+        }
+
+        .box1 {
+                padding: 3.5em 4em;
         }
 
         .box2 {
-                padding: 5em;
+                padding: 5em 5em;
+        }
+
+        .box3 {
+               align-content: flex-start;
+               gap: 3em;
+        }
+
+        .box3 a {
+                font-size: 2rem;
+                padding: .75em 1em;
+        }
+
+        .box3 p {
+             margin: 0;
+             text-align: left;
         }
 }
