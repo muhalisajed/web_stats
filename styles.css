@@ -30,13 +30,13 @@ body {
 
 .box1 h1 {
         margin: 0;
-        font-size: 5.5rem;
+        font-size: 5.5em;
         font-weight: bold;
 }
 
 .box1 p {
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.8em;
         font-weight: bold;
         text-transform: uppercase;
 }
@@ -51,6 +51,7 @@ body {
         flex-direction: column;
         gap: 5em;
         padding: 5em 5em;
+        text-transform: uppercase;
 }
 
 .box2 p {
@@ -86,7 +87,7 @@ h3 {
         text-decoration: none;
         font-size: 2rem;
         font-weight: bold;
-        padding: 1.4em 8.8em;
+        padding: 1em 8.8em;
 }
 
 .box3 p {
@@ -96,7 +97,47 @@ h3 {
         height: 6.8em;
         align-self: center;
 }
+/*iPad Mini*/
 
-@media only screen and (min-width: 703px) {
+/*If the device width is grearter than or equal to 703px do this
+retrieved from: https://www.emailonacid.com/blog/article/email-development/emailology_media_queries_demystified_min-width_and_max-width/ */
+@media only screen and (min-width: 850px) {
+        .wrapper {
+                flex-direction: row;
+                flex-wrap: wrap; 
+                padding: 2em;
+                gap: 2em;
+        }
+
+        .box1, .box2 {
+                align-self: center;
+        }
+
+        .box1 {
+                padding: 4em 4em;
+                align-content: center;
+                flex: 2;
+        }
+
+        .box2 {
+                flex-direction: row;
+                padding: 5.5em 3em;
+                
+        }
         
+        .box3 {
+               flex-direction: column;
+                flex: 1;
+        }
+}
+
+@media only screen and (min-width: 900px) {
+        .wrapper {
+                flex-wrap: nowrap;
+                flex: 0;
+        }
+
+        .box2 {
+                padding: 5em;
+        }
 }
